@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import { RiHealthBookLine } from "react-icons/ri";
 import axios from 'axios';
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -87,6 +88,8 @@ export default function Home() {
   };
   return (
     <>
+      <video id="video-background" autoPlay loop muted>
+      <source src="./vid1.mp4" type="video/mp4" /></video>
       <div className="main h-screen flex flex-row items-center justify-between">
         <div className="left w-1/2 flex flex-col">
           <h1 className="self-center text-4xl my-4">Input Parameters</h1>
@@ -303,6 +306,7 @@ export default function Home() {
         </div>
 
         <div className="right w-2/5 flex flex-col items-center h-3/5 justify-around">
+        <RiHealthBookLine className='h-image'/>
           <div>
             <h2 className="self-center text-5xl my-2 ">Breast</h2>
             <h2 className="self-center text-5xl my-2 ">Cancer</h2>
